@@ -97,4 +97,29 @@ class AuthController extends Controller
             'user' => auth()->user()
         ]);
     }
+    /**
+     *Update the authenticated User.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function updateData(Request $request) {
+        $id = Auth::id(); 
+        $user = Auth::user();
+        $validator = Validator::make($request->all(), [
+            'name' => 'nullable|string|between:2,100',
+            'email' => 'nullable|string|email|max:100|unique:users',
+            'password' => 'nullable|string|confirmed|min:6',
+        ]);
+        if($validator->fails()){
+            return response()->json($validator->errors()->toJson(), 400);
+        }
+        $user = User::whereId($id)->update(array_merge(
+                    $validator->validated(),
+                    ['password' => bcrypt($request->password)]
+                ));
+        return response()->json([
+            'message' => 'Data successfully Updated',
+            'user' => $user
+        ], 201);
+    }
 }
