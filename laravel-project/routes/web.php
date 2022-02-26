@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Web\MainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [MainController::class, "index"])->name("web:index");
+Route::get('/signin', [MainController::class, "index"])->name("web:signin");
+Route::get('/signup', [MainController::class, "index"])->name("web:signup");
+Route::get('/dashboard', [MainController::class, "index"])->name("web:dashboard");
