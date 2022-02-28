@@ -1,9 +1,12 @@
-const Dashboard = () => {
+import Dashboard from "../components/Dashboard";
+
+const DashboardPage = () => {
+
     return (
-      <div className="Dashboard">
-        <h1>Sorry... Dashboard page is under development</h1>
-      </div>
+        <div className="user-details">
+         <Dashboard/>
+        </div>
     );
   }
    
-  export default Dashboard;
+  export default DashboardPage;
