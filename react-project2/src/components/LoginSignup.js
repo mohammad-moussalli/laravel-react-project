@@ -52,10 +52,11 @@ const signupApi = "http://127.0.0.1:8000/api/auth/register";
         setError("Invalid Input")
     });
 }
+    const [showSignup, setShowSignup] = useState(true);
 
     return (
         <div>
-            <Box className="Login" sx={{ 
+        {showSignup?<Box className="Login" sx={{ 
             flexDirection: 'column',
             display: 'flex',
             justifyContent: 'space-evenly', 
@@ -79,23 +80,22 @@ const signupApi = "http://127.0.0.1:8000/api/auth/register";
                         borderRadius:'5px'
                         }} onChange={e => setPassword(e.target.value)}/>
                     <Button className="Button" type="submit" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}}> Login</Button>
-                    <Button className="Button" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}}> Register</Button>      
+                    <Button className="Button" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}} onClick ={() => setShowSignup(false)}> Register</Button>      
                 </form>
                 <p>{error}</p>  
             </Box>
-
-            <Box className="Signup"sx={{ 
-            flexDirection: 'column',
-            display: 'flex',
-            justifyContent: 'space-evenly', 
-            alignItems: 'center', 
-            borderColor: '#333', 
-            maxWidth:'300px', 
-            border:'solid', 
-            borderRadius:'10px',
-            padding: '10px',
-            backgroundColor: 'wheat'
-            }}>
+            :<Box className="Signup"sx={{ 
+                flexDirection: 'column',
+                display: 'flex',
+                justifyContent: 'space-evenly', 
+                alignItems: 'center', 
+                borderColor: '#333', 
+                maxWidth:'300px', 
+                border:'solid', 
+                borderRadius:'10px',
+                padding: '10px',
+                backgroundColor: 'wheat'
+                }}>
                 <form onSubmit={signup} style={{display:'flex', flexDirection:'column'}}>
                     <TextField id="outlined-basic" label="Email" variant="outlined" style={{
                         margin: "10px", 
@@ -117,14 +117,13 @@ const signupApi = "http://127.0.0.1:8000/api/auth/register";
                         backgroundColor:'white', 
                         borderRadius:'5px'
                         }} onChange={e => setPasswordConfirmation(e.target.value)}/>
-                    <Button className="Button" type="submit" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}}> Signup</Button>      
+                    <Button className="Button" type="submit" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}}> Signup</Button>
+                    <Button className="Button" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}} onClick ={() => setShowSignup(true)}> Close</Button>           
                 </form>
-                <p>{error}</p>
-            </Box>
-        </div>  
-
+                <p>{error}</p> 
+            </Box>}
+        </div>
     );
-  
 }
    
   export default LoginSignup;
