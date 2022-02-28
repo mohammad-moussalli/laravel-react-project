@@ -37,7 +37,7 @@ useEffect(() => {
   
     if (localStorage.getItem('token') == null) {
       return (
-        <h1>Please Register or Login to access this page</h1>
+        <h1 className="dashboard">Please Register or Login to access this page</h1>
       )} else {
         return (
           <div className="user-details">
