@@ -1,4 +1,4 @@
-import { Button } from '@mui/material';
+import { Box, Button, TextField } from '@mui/material';
 import axios from 'axios';
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
@@ -55,25 +55,72 @@ const signupApi = "http://127.0.0.1:8000/api/auth/register";
 
     return (
         <div>
-        <div className="login">
-            <form onSubmit={signin}>
-                <input type="text" placeholder="Email" onChange={e => setEmail(e.target.value)}/>
-                <input type="text" placeholder="Password" onChange={e => setPassword(e.target.value)}/>
-                <Button className="Button" type="submit" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}}> Login</Button>      
-            </form>
-            <p>{error}</p>
-            
-        </div>
-                <div className="login">
-                <form onSubmit={signup}>
-                    <input type="text" placeholder="Email" onChange={e => setEmail(e.target.value)}/>
-                    <input type="text" placeholder="Name" onChange={e => setName(e.target.value)}/>
-                    <input type="text" placeholder="Password" onChange={e => setPassword(e.target.value)}/>
-                    <input type="text" placeholder="Confirm your password" onChange={e => setPasswordConfirmation(e.target.value)}/>
+            <Box className="Login" sx={{ 
+            flexDirection: 'column',
+            display: 'flex',
+            justifyContent: 'space-evenly', 
+            alignItems: 'center', 
+            borderColor: '#333', 
+            maxWidth:'300px', 
+            border:'solid', 
+            borderRadius:'10px',
+            padding: '10px',
+            backgroundColor: 'wheat'
+            }}>
+                <form onSubmit={signin} style={{display:'flex', flexDirection:'column'}}>
+                <TextField id="outlined-basic" label="Email" variant="outlined" style={{
+                        margin: "10px", 
+                        backgroundColor:'white', 
+                        borderRadius:'5px'
+                        }} onChange={e => setEmail(e.target.value)}/>
+                    <TextField id="outlined-basic" label="Password" variant="outlined" style={{
+                        margin: "10px", 
+                        backgroundColor:'white', 
+                        borderRadius:'5px'
+                        }} onChange={e => setPassword(e.target.value)}/>
+                    <Button className="Button" type="submit" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}}> Login</Button>
+                    <Button className="Button" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}}> Register</Button>      
+                </form>
+                <p>{error}</p>  
+            </Box>
+
+            <Box className="Signup"sx={{ 
+            flexDirection: 'column',
+            display: 'flex',
+            justifyContent: 'space-evenly', 
+            alignItems: 'center', 
+            borderColor: '#333', 
+            maxWidth:'300px', 
+            border:'solid', 
+            borderRadius:'10px',
+            padding: '10px',
+            backgroundColor: 'wheat'
+            }}>
+                <form onSubmit={signup} style={{display:'flex', flexDirection:'column'}}>
+                    <TextField id="outlined-basic" label="Email" variant="outlined" style={{
+                        margin: "10px", 
+                        backgroundColor:'white', 
+                        borderRadius:'5px'
+                        }} onChange={e => setEmail(e.target.value)}/>
+                    <TextField id="outlined-basic" label="Name" variant="outlined" style={{
+                        margin: "10px", 
+                        backgroundColor:'white', 
+                        borderRadius:'5px'
+                        }} onChange={e => setName(e.target.value)}/>
+                    <TextField id="outlined-basic" label="Password" variant="outlined" style={{
+                        margin: "10px", 
+                        backgroundColor:'white', 
+                        borderRadius:'5px'
+                        }} onChange={e => setPassword(e.target.value)}/>
+                    <TextField id="outlined-basic" label="Password Confirmation" variant="outlined" style={{
+                        margin: "10px", 
+                        backgroundColor:'white', 
+                        borderRadius:'5px'
+                        }} onChange={e => setPasswordConfirmation(e.target.value)}/>
                     <Button className="Button" type="submit" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}}> Signup</Button>      
                 </form>
                 <p>{error}</p>
-                </div>
+            </Box>
         </div>  
 
     );
