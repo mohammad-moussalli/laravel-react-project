@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import Button from '@mui/material/Button';
 import axios from "axios";
 
@@ -38,7 +37,7 @@ useEffect(() => {
   
     if (localStorage.getItem('token') == null) {
       return (
-        <p>Please signIn</p>
+        <h1>Please Register or Login to access this page</h1>
       )} else {
         return (
           <div className="user-details">
