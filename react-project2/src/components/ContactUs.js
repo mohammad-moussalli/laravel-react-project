@@ -17,7 +17,7 @@ const ContactUs = () => {
             border:'solid', 
             borderRadius:'10px',
             padding: '10px',
-            backgroundColor: 'wheat'
+            backgroundColor: 'wheat',
             }}>
             <h2>Contact Us</h2>
             <TextField id="outlined-basic" label="Name" variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px'}} value={val}/>
