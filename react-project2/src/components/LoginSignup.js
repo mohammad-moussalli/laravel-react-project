@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import axios from 'axios';
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
@@ -58,7 +59,7 @@ const signupApi = "http://127.0.0.1:8000/api/auth/register";
             <form onSubmit={signin}>
                 <input type="text" placeholder="Email" onChange={e => setEmail(e.target.value)}/>
                 <input type="text" placeholder="Password" onChange={e => setPassword(e.target.value)}/>
-                <button className="Login" type="submit"> Login</button>      
+                <Button className="Button" type="submit" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}}> Login</Button>      
             </form>
             <p>{error}</p>
             
@@ -69,7 +70,7 @@ const signupApi = "http://127.0.0.1:8000/api/auth/register";
                     <input type="text" placeholder="Name" onChange={e => setName(e.target.value)}/>
                     <input type="text" placeholder="Password" onChange={e => setPassword(e.target.value)}/>
                     <input type="text" placeholder="Confirm your password" onChange={e => setPasswordConfirmation(e.target.value)}/>
-                    <button className="Login" type="submit"> Signup</button>      
+                    <Button className="Button" type="submit" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}}> Signup</Button>      
                 </form>
                 <p>{error}</p>
                 </div>

@@ -7,12 +7,23 @@ const ContactUs = () => {
     const [val, setVal] = useState();
 
     return (
-        <Box sx={{ flexDirection: 'column', display: 'flex', justifyContent: 'space-evenly', alignItems: 'center' }}>…
+        <Box sx={{ 
+            flexDirection: 'column',
+            display: 'flex',
+            justifyContent: 'space-evenly', 
+            alignItems: 'center', 
+            borderColor: '#333', 
+            maxWidth:'300px', 
+            border:'solid', 
+            borderRadius:'10px',
+            padding: '10px',
+            backgroundColor: 'wheat'
+            }}>
             <h2>Contact Us</h2>
-            <TextField id="outlined-basic" label="Name" variant="outlined" style={{margin: "5px"}} value={val}/>
-            <TextField id="outlined-basic" label="Email" variant="outlined" style={{margin: "5px"}} value={val}/>
-            <TextField id="outlined-basic" label="Message" variant="outlined" style={{margin: "5px"}} value={val}/>
-            <Button variant="text" style={{color: 'white', backgroundColor: '#f1356d', borderRadius: '8px'}} onClick={() => setVal(() => "")}>Submit</Button>
+            <TextField id="outlined-basic" label="Name" variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px'}} value={val}/>
+            <TextField id="outlined-basic" label="Email" variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px'}} value={val}/>
+            <TextField id="outlined-multiline-static" label="Message" multiline rows={5} variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px'}} value={val}/>
+            <Button className="Button" variant="text" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}} onClick={() => setVal(() => "")}>Submit</Button>
         </Box>
     );
   }
