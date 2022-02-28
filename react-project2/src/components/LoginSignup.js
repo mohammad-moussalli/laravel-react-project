@@ -55,7 +55,7 @@ const signupApi = "http://127.0.0.1:8000/api/auth/register";
     const [showSignup, setShowSignup] = useState(true);
 
     return (
-        <div>
+        <div className='LoginSignup'>
         {showSignup?<Box className="Login" sx={{ 
             flexDirection: 'column',
             display: 'flex',
