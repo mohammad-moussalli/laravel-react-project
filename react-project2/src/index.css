@@ -16,3 +16,8 @@ Link{
   font-family: "Quicksand";
   color: #333;
 }
+
+.dashboard{
+  text-align: center;
+  margin-top: 50px;
+}
