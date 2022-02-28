@@ -1,9 +1,11 @@
-const LoginSignup = () => {
+import LoginSignup from "../components/LoginSignup";
+
+const LoginSignupPage = () => {
     return (
       <div className="LoginSignup">
-        <h1>Sorry... Login/Signup page is under development</h1>
+        <LoginSignup />
       </div>
     );
   }
-   
-  export default LoginSignup;
+    
+  export default LoginSignupPage; 
