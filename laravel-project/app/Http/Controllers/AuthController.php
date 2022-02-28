@@ -45,15 +45,19 @@ class AuthController extends Controller
             'password' => 'required|string|confirmed|min:6',
         ]);
         if($validator->fails()){
-            return response()->json($validator->errors()->toJson(), 400);
+            return response()->json(['error' => $validator->errors()->toJson()], 400);
         }
         $user = User::create(array_merge(
                     $validator->validated(),
                     ['password' => bcrypt($request->password)]
                 ));
+        if (! $token = auth()->attempt($validator->validated())) {
+            return response()->json(['error' => 'Unauthorized'], 401);
+        }
+        $token = $this->createNewToken($token);
         return response()->json([
             'message' => 'User successfully registered',
-            'user' => $user
+            'user' => $token
         ], 201);
     }
 
@@ -119,7 +123,7 @@ class AuthController extends Controller
                 ));
         return response()->json([
             'message' => 'Data successfully Updated',
-            'user' => $user
+            'user' => auth()->user()
         ], 201);
     }
 }
