@@ -22,7 +22,7 @@ const signupApi = "http://127.0.0.1:8000/api/auth/register";
         };
         axios.post(signinApi, { ...user } )
         .then(response => {
-            if(email == response.data.user.email){
+            if(email === response.data.user.email){
                 localStorage.setItem("token", response.data.access_token)
                 history.push('/dashboard')
                 console.log(response.data)
@@ -42,7 +42,7 @@ const signupApi = "http://127.0.0.1:8000/api/auth/register";
     };
     axios.post(signupApi, { ...user } )
     .then(response => {
-        if(email == response.data.user.original.user.email){
+        if(email === response.data.user.original.user.email){
             localStorage.setItem("token", response.data.user.original.access_token)
             console.log(response.data)
             history.push('/dashboard')
@@ -72,7 +72,7 @@ const signupApi = "http://127.0.0.1:8000/api/auth/register";
                     <button className="Login" type="submit"> Signup</button>      
                 </form>
                 <p>{error}</p>
-            </div>
+                </div>
         </div>  
 
     );
