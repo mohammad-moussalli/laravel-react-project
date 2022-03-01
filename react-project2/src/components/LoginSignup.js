@@ -68,7 +68,7 @@ const signupApi = "http://127.0.0.1:8000/api/auth/register";
             padding: '10px',
             backgroundColor: 'wheat'
             }}>
-                <form onSubmit={signin} style={{display:'flex', flexDirection:'column'}}>
+                <form className="Signin" onSubmit={signin} style={{display:'flex', flexDirection:'column'}}>
                 <TextField id="outlined-basic" label="Email" variant="outlined" style={{
                         margin: "10px", 
                         backgroundColor:'white', 
@@ -96,7 +96,7 @@ const signupApi = "http://127.0.0.1:8000/api/auth/register";
                 padding: '10px',
                 backgroundColor: 'wheat'
                 }}>
-                <form onSubmit={signup} style={{display:'flex', flexDirection:'column'}}>
+                <form className='Register' onSubmit={signup} style={{display:'flex', flexDirection:'column'}}>
                     <TextField id="outlined-basic" label="Email" variant="outlined" style={{
                         margin: "10px", 
                         backgroundColor:'white', 
