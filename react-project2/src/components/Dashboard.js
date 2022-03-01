@@ -51,7 +51,7 @@ useEffect(() => {
             display: 'flex',
             justifyContent: 'space-evenly', 
             borderColor: '#333', 
-            width:'500px', 
+            width:'50vw', 
             minHeight:'250px',
             border:'solid', 
             borderRadius:'10px',
@@ -70,10 +70,10 @@ useEffect(() => {
           
           :<Box className="UpdateData">
             <form className='UpdateUser' onSubmit={updateUser}>
-                <TextField value={email} id="outlined-basic"  variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px', minWidth: 530}} onChange={e => setEmail(e.target.value)}/>
-                <TextField value={name} id="outlined-basic"  variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px', minWidth: 530}} onChange={e => setName(e.target.value)}/>
-                <TextField id="outlined-basic" label="Password" variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px', minWidth: 530}} onChange={e => setPassword(e.target.value)}/>
-                <TextField id="outlined-basic" label="Confirm Password" variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px', minWidth: 530}} onChange={e => setPasswordConfirmation(e.target.value)}/>
+                <TextField value={email} id="outlined-basic"  variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px', width: '80%'}} onChange={e => setEmail(e.target.value)}/>
+                <TextField value={name} id="outlined-basic"  variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px', width: '80%'}} onChange={e => setName(e.target.value)}/>
+                <TextField id="outlined-basic" label="Password" variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px', width: '80%'}} onChange={e => setPassword(e.target.value)}/>
+                <TextField id="outlined-basic" label="Confirm Password" variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px', minWidth: '80%'}} onChange={e => setPasswordConfirmation(e.target.value)}/>
                 <Button className="Button" type="submit" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}}> Save</Button> 
                 <Button className="Button" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}} onClick ={() => setShowUpdateData(true)}> Close</Button> 
 

@@ -50,21 +50,21 @@ Link{
 .Signin{
   display: flex;
   flex-basis: 90%;
-  min-width: 550px;
+  min-width: 80%;
 }
 
 .Register{
   display: flex;
   flex-basis: 90%;
-  min-width: 550px;
+  min-width: 80%;
 }
 
 .Login{
-  min-width: 600px;
+  min-width: 50vw;
 }
 
 .Signup{
-  min-width: 600px;
+  min-width: 50vw;
 }
 
 .UpdateUser{
@@ -73,12 +73,13 @@ Link{
   justify-content: space-evenly;
   align-items: center;
   border-color: #333;
-  width:550px; 
+  width:50vw; 
   height:450px;
   border:solid; 
   border-radius:10px;
   padding:10px;
   background-color: wheat;
+  margin-top: 50px;
 }
 
 h6{
