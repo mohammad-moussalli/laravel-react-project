@@ -32,6 +32,8 @@ const updateUser = async () => {
     { headers: {"Authorization" : `Bearer ${token}`} } )
 }
 
+const [showUpdateData, setShowUpdateData] = useState(true);
+
 useEffect(() => {
   getUser() 
 }, []);
@@ -41,8 +43,10 @@ useEffect(() => {
         <h1 className="dashboard">Please Register or Login to access this page</h1>
       )} else {
         return (
+
         <div className="Dashboard">
-          <Box sx={{ 
+
+          {showUpdateData?<Box sx={{ 
             flexDirection: 'column',
             display: 'flex',
             justifyContent: 'space-evenly', 
@@ -60,20 +64,23 @@ useEffect(() => {
             }}>          
             <h3>Name: {name}</h3>
             <h3>Email: {email}</h3>
-            <Button  className='Button' variant="contained" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}}>Update info</Button>
+            <Button  className='Button' variant="text" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}} onClick ={() => setShowUpdateData(false)}>Update info</Button>
             <Fragment><h6>{error}</h6></Fragment>
           </Box>
           
-         <Box className="UpdateData">
+          :<Box className="UpdateData">
             <form className='UpdateUser' onSubmit={updateUser}>
                 <TextField value={email} id="outlined-basic"  variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px', minWidth: 530}} onChange={e => setEmail(e.target.value)}/>
                 <TextField value={name} id="outlined-basic"  variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px', minWidth: 530}} onChange={e => setName(e.target.value)}/>
                 <TextField id="outlined-basic" label="Password" variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px', minWidth: 530}} onChange={e => setPassword(e.target.value)}/>
                 <TextField id="outlined-basic" label="Confirm Password" variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px', minWidth: 530}} onChange={e => setPasswordConfirmation(e.target.value)}/>
                 <Button className="Button" type="submit" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}}> Save</Button> 
+                <Button className="Button" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}} onClick ={() => setShowUpdateData(true)}> Close</Button> 
+
                 <Fragment><h6>{error}</h6></Fragment>
             </form>
           </Box>
+        }
         </div>
         )
       }
