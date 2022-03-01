@@ -19,6 +19,7 @@ Link{
 
 .dashboard{
   text-align: center;
+  margin-top: 20px;
 }
 
 .ContactUs{
@@ -89,4 +90,13 @@ h6{
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
+}
+.AboutUs{
+  text-align: center;
+  margin: 50px;
+}
+
+.Services{
+  text-align: center;
+  margin-top: 20px;
 }
