@@ -13,6 +13,8 @@ use App\Http\Controllers\ContactFormController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::post('/contact', [ContactFormController::class, 'contactForm']); 
+
 Route::group([
     'middleware' => 'api',
     'prefix' => 'auth'
@@ -26,4 +28,3 @@ Route::group([
    
 });
 
-Route::post('/contact', [ContactFormController::class, 'contactForm']); 
