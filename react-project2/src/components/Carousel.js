@@ -8,7 +8,7 @@ const ImageCarousel = () => {
   }));
 
   return (
-    <Carousel images={images} style={{ height: 600, width: 600}} />
+    <Carousel images={images} className='carousel' style={{ height: 600, width: '45vw'}} />
   );
 };
 

@@ -1,6 +1,8 @@
+import { Box } from "@mui/material";
+
 const AboutUs = () => {
     return (
-      <div className="AboutUs">
+      <Box className="AboutUs">
         <h1>About Us</h1>
         <div className="aboutus">
           <h4>This is an Educational Project implemented using Laravel Framework and React Js Library undergone using the MVC (Model-View-Controller) software design architecural pattern.</h4>
@@ -9,7 +11,7 @@ const AboutUs = () => {
           <h4>For the Frontend, JSX language was used in a React Js Library to connect with the Backend and display the returned output from the Model to the user.</h4>
           <h4>The Frontend represents the View part of this Educational Project .</h4>
         </div>
-      </div>
+      </Box>
     );
   }
    
