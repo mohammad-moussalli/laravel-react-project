@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import axios from "axios";
 import { Box  } from "@mui/system";
 import { TextField } from "@mui/material";
+import { BUTTON_COLOR, BUTTON_RADIUS, TEXTFIELD_COLOR, TEXTFIELD_MARGIN, TEXTFIELD_RADIUS, TEXT_COLOR } from "../constants/styles";
 
 const Dashboard = () => {
   const getUserApi = "http://127.0.0.1:8000/api/auth/user-profile";
@@ -34,9 +35,7 @@ const updateUser = async () => {
 
 const [showUpdateData, setShowUpdateData] = useState(true);
 
-useEffect(() => {
-  getUser() 
-}, []);
+useEffect(() => { getUser() }, []);
   
     if (localStorage.getItem('token') == null) {
       return (
@@ -70,12 +69,12 @@ useEffect(() => {
           
           :<Box className="UpdateData">
             <form className='UpdateUser' onSubmit={updateUser}>
-                <TextField value={email} id="outlined-basic"  variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px', width: '80%'}} onChange={e => setEmail(e.target.value)}/>
-                <TextField value={name} id="outlined-basic"  variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px', width: '80%'}} onChange={e => setName(e.target.value)}/>
-                <TextField id="outlined-basic" label="Password" variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px', width: '80%'}} onChange={e => setPassword(e.target.value)}/>
-                <TextField id="outlined-basic" label="Confirm Password" variant="outlined" style={{margin: "10px", backgroundColor:'white', borderRadius:'5px', minWidth: '80%'}} onChange={e => setPasswordConfirmation(e.target.value)}/>
-                <Button className="Button" type="submit" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}}> Save</Button> 
-                <Button className="Button" style={{backgroundColor:'wheat', borderRadius:'10px', color:'#333'}} onClick ={() => setShowUpdateData(true)}> Close</Button> 
+                <TextField value={email} id="outlined-basic"  variant="outlined" style={{margin: TEXTFIELD_MARGIN, backgroundColor: TEXTFIELD_COLOR, borderRadius:TEXTFIELD_RADIUS, width: '80%'}} onChange={e => setEmail(e.target.value)}/>
+                <TextField value={name} id="outlined-basic"  variant="outlined" style={{margin: TEXTFIELD_MARGIN, backgroundColor: TEXTFIELD_COLOR, borderRadius:TEXTFIELD_RADIUS, width: '80%'}} onChange={e => setName(e.target.value)}/>
+                <TextField id="outlined-basic" label="Password" variant="outlined" style={{margin: TEXTFIELD_MARGIN, backgroundColor: TEXTFIELD_COLOR, borderRadius:TEXTFIELD_RADIUS, width: '80%'}} onChange={e => setPassword(e.target.value)}/>
+                <TextField id="outlined-basic" label="Confirm Password" variant="outlined" style={{margin: TEXTFIELD_MARGIN, backgroundColor:TEXTFIELD_COLOR, borderRadius:TEXTFIELD_RADIUS, minWidth: '80%'}} onChange={e => setPasswordConfirmation(e.target.value)}/>
+                <Button className="Button" type="submit" style={{backgroundColor:BUTTON_COLOR, borderRadius:BUTTON_RADIUS, color:'#333'}}> Save</Button> 
+                <Button className="Button" style={{backgroundColor:BUTTON_COLOR, borderRadius:BUTTON_RADIUS, color:TEXT_COLOR}} onClick ={() => setShowUpdateData(true)}> Close</Button> 
 
                 <Fragment><h6>{error}</h6></Fragment>
             </form>
