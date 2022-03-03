@@ -2,7 +2,7 @@ import { Box, Button, TextField } from '@mui/material';
 import axios from 'axios';
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { BUTTON_COLOR, BUTTON_RADIUS, TEXTFIELD_COLOR, TEXTFIELD_MARGIN, TEXTFIELD_RADIUS, TEXT_COLOR } from '../constants/styles';
+import { BUTTON_COLOR, BUTTON_RADIUS, TEXT_COLOR } from '../constants/styles';
 
 const LoginSignup = () => {
 
@@ -59,16 +59,8 @@ const signupApi = "http://127.0.0.1:8000/api/auth/register";
         <div className='LoginSignup'>
         {showSignup?<Box className="Login">
                 <form className="Signin" onSubmit={signin} style={{display:'flex', flexDirection:'column'}}>
-                <TextField id="outlined-basic" label="Email" variant="outlined" style={{
-                        margin: TEXTFIELD_MARGIN, 
-                        backgroundColor:TEXTFIELD_COLOR, 
-                        borderRadius:TEXTFIELD_RADIUS
-                        }} onChange={e => setEmail(e.target.value)}/>
-                    <TextField id="outlined-basic" label="Password" variant="outlined" style={{
-                        margin: TEXTFIELD_MARGIN, 
-                        backgroundColor:TEXTFIELD_COLOR, 
-                        borderRadius:TEXTFIELD_RADIUS
-                        }} onChange={e => setPassword(e.target.value)}/>
+                    <TextField className='textfield' id="outlined-basic" label="Email" variant="outlined"  onChange={e => setEmail(e.target.value)}/>
+                    <TextField className='textfield' id="outlined-basic" label="Password" variant="outlined" onChange={e => setPassword(e.target.value)}/>
                     <Button className="Button" type="submit" style={{backgroundColor:BUTTON_COLOR, borderRadius:BUTTON_RADIUS, color:TEXT_COLOR}}> Login</Button>
                     <Button className="Button" style={{backgroundColor:BUTTON_COLOR, borderRadius:BUTTON_RADIUS, color:TEXT_COLOR}} onClick ={() => setShowSignup(false)}> Register</Button>      
                 </form>
@@ -76,27 +68,10 @@ const signupApi = "http://127.0.0.1:8000/api/auth/register";
             </Box>
             :<Box className="Signup">
                 <form className='Register' onSubmit={signup} style={{display:'flex', flexDirection:'column'}}>
-                    <TextField id="outlined-basic" label="Email" variant="outlined" style={{
-                        margin: TEXTFIELD_MARGIN, 
-                        backgroundColor:TEXTFIELD_COLOR, 
-                        borderRadius:TEXTFIELD_RADIUS
-                        }} onChange={e => setEmail(e.target.value)}/>
-                    <TextField id="outlined-basic" label="Name" variant="outlined" style={{
-                        margin: TEXTFIELD_MARGIN, 
-                        backgroundColor:TEXTFIELD_COLOR, 
-                        borderRadius:TEXTFIELD_RADIUS
-                        }} onChange={e => setName(e.target.value)}/>
-                    <TextField id="outlined-basic" label="Password" variant="outlined" style={{
-                        margin: TEXTFIELD_MARGIN, 
-                        backgroundColor:TEXTFIELD_COLOR, 
-                        borderRadius:TEXTFIELD_RADIUS
-                        }} onChange={e => setPassword(e.target.value)}/>
-                    <TextField id="outlined-basic" label="Password Confirmation" variant="outlined" style={{
-                        margin: TEXTFIELD_MARGIN, 
-                        backgroundColor:TEXTFIELD_COLOR, 
-                        borderRadius:TEXTFIELD_RADIUS
-                
-                        }} onChange={e => setPasswordConfirmation(e.target.value)}/>
+                    <TextField className='textfield' id="outlined-basic" label="Email" variant="outlined"  onChange={e => setEmail(e.target.value)}/>
+                    <TextField className='textfield' id="outlined-basic" label="Name" variant="outlined" onChange={e => setName(e.target.value)}/>
+                    <TextField className='textfield' id="outlined-basic" label="Password" variant="outlined" onChange={e => setPassword(e.target.value)}/>
+                    <TextField className='textfield' id="outlined-basic" label="Password Confirmation" variant="outlined" onChange={e => setPasswordConfirmation(e.target.value)}/>
                     <Button className="Button" type="submit" style={{backgroundColor:BUTTON_COLOR, borderRadius:BUTTON_RADIUS, color:TEXT_COLOR}}> Signup</Button>
                     <Button className="Button" style={{backgroundColor:BUTTON_COLOR, borderRadius:BUTTON_RADIUS, color:TEXT_COLOR}} onClick ={() => setShowSignup(true)}> Close</Button>           
                 </form>

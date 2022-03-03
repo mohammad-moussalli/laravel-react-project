@@ -41,7 +41,7 @@ Link{
 }
 
 .LoginSignup{
-  margin-top: 70px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,13 +50,16 @@ Link{
 .Signin{
   display: flex;
   flex-basis: 90%;
-  min-width: 80%;
+  min-width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
 }
-
 .Register{
   display: flex;
   flex-basis: 90%;
-  min-width: 80%;
+  min-width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .Login{
@@ -70,6 +73,7 @@ Link{
   border-radius: 10px;
   padding: 10px;
   background-color: wheat;
+  height: 300px;
 }
 
 .Signup{
@@ -83,6 +87,7 @@ Link{
   border-radius: 10px;
   padding: 10px;
   background-color: wheat;
+  height: 550px;
 }
 
 .UpdateUser{
@@ -155,7 +160,7 @@ h6{
   background-color: wheat;
 }
 
-.ContactUsBox{
+.ContactUsForm{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -167,4 +172,11 @@ h6{
   height:550px;
   padding:10px;
   background-color: wheat;
+}
+
+.textfield{
+  background-color: white;
+  border-radius: 5px;
+  margin: 10px;
+  width: 80%;
 }
