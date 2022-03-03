@@ -27,6 +27,7 @@ const signupApi = "http://127.0.0.1:8000/api/auth/register";
             if(email === response.data.user.email){
                 localStorage.setItem("token", response.data.access_token)
                 history.push('/dashboard')
+                window.location.reload();
             };
         }).catch (err => {
             setError("Invalid Credentials")
@@ -46,6 +47,7 @@ const signupApi = "http://127.0.0.1:8000/api/auth/register";
         if(email === response.data.user.original.user.email){
             localStorage.setItem("token", response.data.user.original.access_token)
             history.push('/dashboard')
+            window.location.reload()
         };
     }).catch(err => {
         setError("Invalid Input")
