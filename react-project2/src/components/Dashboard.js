@@ -9,11 +9,11 @@ const Dashboard = () => {
   const getUserApi = "http://127.0.0.1:8000/api/auth/user-profile";
   const updateUserApi = "http://127.0.0.1:8000/api/auth/update-data";
 
-  const [email, setEmail] = useState(null);
-  const [name, setName] = useState(null);
-  const [error, setError]  = useState(null);
-  const [password, setPassword] = useState(null);
-  const [passwordConfirmation, setPasswordConfirmation] = useState(null);
+  const [email, setEmail] = useState();
+  const [name, setName] = useState();
+  const [error, setError]  = useState();
+  const [password, setPassword] = useState();
+  const [passwordConfirmation, setPasswordConfirmation] = useState();
 
 
   const getUser = async () => {
@@ -46,11 +46,11 @@ useEffect(() => { getUser() }, []);
         <div className="Dashboard">
 
           {showUpdateData?<Box className="UserData">     
-            <div>
+            <div className="data">
               <h3>Name: {name}</h3>
               <h3>Email: {email}</h3>
             </div>     
-            <Button  className='Button' variant="text" style={{backgroundColor:BUTTON_COLOR, borderRadius:BUTTON_RADIUS, color:TEXT_COLOR, alignSelf:'center'}} onClick ={() => setShowUpdateData(false)}>Update info</Button>
+            <Button  className='buttons' variant="text" style={{backgroundColor:BUTTON_COLOR, borderRadius:BUTTON_RADIUS, color:TEXT_COLOR, alignSelf:'center'}} onClick ={() => setShowUpdateData(false)}>Update info</Button>
             <Fragment><h6>{error}</h6></Fragment>
           </Box>
           
@@ -60,8 +60,8 @@ useEffect(() => { getUser() }, []);
                 <TextField className="textfield" value={name} id="outlined-basic"  variant="outlined" onChange={e => setName(e.target.value)}/>
                 <TextField className="textfield" value={password} id="outlined-basic" label="Password" variant="outlined" onChange={e => setPassword(e.target.value)}/>
                 <TextField className="textfield" value={passwordConfirmation} id="outlined-basic" label="Confirm Password" variant="outlined" onChange={e => setPasswordConfirmation(e.target.value)}/>
-                <Button className="Button" type="submit" style={{backgroundColor:BUTTON_COLOR, borderRadius:BUTTON_RADIUS, color:TEXT_COLOR}}> Save</Button> 
-                <Button className="Button" style={{backgroundColor:BUTTON_COLOR, borderRadius:BUTTON_RADIUS, color:TEXT_COLOR}} onClick ={() => setShowUpdateData(true)}> Close</Button> 
+                <Button className="saveButton" type="submit" style={{backgroundColor:BUTTON_COLOR, borderRadius:BUTTON_RADIUS, color:TEXT_COLOR}}> Save</Button> 
+                <Button className="closeButton" style={{backgroundColor:BUTTON_COLOR, borderRadius:BUTTON_RADIUS, color:TEXT_COLOR}} onClick ={() => setShowUpdateData(true)}> Close</Button> 
 
                 <Fragment><h6>{error}</h6></Fragment>
             </form>

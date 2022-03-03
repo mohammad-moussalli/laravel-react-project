@@ -105,6 +105,10 @@ Link{
   margin-top: 50px;
 }
 
+.UpdateData{
+  position: relative;
+}
+
 h6{
   text-align: center;
 }
@@ -125,7 +129,7 @@ h6{
   border:solid; 
   border-color: #333;
   border-radius:10px;
-  width: 45vw; 
+  width: 75vw; 
   height:550px;
   padding:10px;
   background-color: wheat;
@@ -179,4 +183,326 @@ h6{
   border-radius: 5px;
   margin: 10px;
   width: 80%;
+}
+
+.buttons{
+  position: relative;
+  top: 200px;
+}
+
+.saveButton{
+  position: relative;
+  top: 80px;
+}
+
+.closeButton{
+  position: relative;
+  top: 50px;
+}
+
+.carousel{
+  max-width: 45vw;
+  max-height: 600px;
+}
+
+@media (max-width: 1200px){
+
+  .ContactUsForm{
+    width: 44vw;
+    height: 530px;
+  }
+
+  .carousel{
+    max-width: 43vw;
+  }
+
+  .Login{
+    width: 46vw;
+  }
+
+  .Signup{
+    width: 46vw;
+  }
+}
+
+@media (max-width: 1175px){
+
+  .ContactUsForm{
+    height: 510px; 
+  }
+
+  .Login{
+    width: 47vw;
+  }
+
+  .Signup{
+    width: 47vw;
+  }
+}
+
+@media (max-width: 1150px){
+
+  .ContactUsForm{
+    height: 490px; 
+  }
+  .Login{
+    width: 48vw;
+  }
+
+  .Signup{
+    width: 48vw;
+  }
+}
+
+@media (max-width: 1125px){
+
+  .ContactUsForm{
+    height: 470px; 
+  }
+  .Login{
+    width: 49vw;
+  }
+
+  .Signup{
+    width: 49vw;
+  }
+}
+
+@media (max-width: 1100px){
+
+  .ContactUsForm{
+    height: 450px;  
+  }
+  .Login{
+    width: 50vw;
+  }
+
+  .Signup{
+    width: 50vw;
+  }
+}
+
+@media (max-width: 1075px){
+
+  .ContactUsForm{
+    height: 440px;  
+  }
+  .Login{
+    width: 51vw;
+  }
+
+  .Signup{
+    width: 51vw;
+  }
+}
+
+@media (max-width: 1050px){
+
+  .ContactUsForm{
+    height: 430px;  
+  }
+  .Signup{
+    width: 52vw;
+  }
+
+  .Login{
+    width: 52vw;
+  }
+}
+
+@media (max-width: 1025px){
+
+  .ContactUsForm{
+    height: 420px;  
+  }
+  .Login{
+    width: 53vw;
+  }
+
+  .Signup{
+    width: 53vw;
+  }
+}
+
+@media (max-width: 1000px){
+
+  .ContactUsForm{
+    height: 410px;  
+  }
+  .Login{
+    width: 54vw;
+  }
+
+  .Signup{
+    width: 54vw;
+  }
+}
+
+@media (max-width: 900px){
+
+  .ContactUs{
+    flex-direction: column-reverse;
+  }
+  .Login{
+    width: 55vw;
+  }
+
+  .Signup{
+    width: 55vw;
+  }
+
+  .carousel{
+    max-width: 65vw;
+    max-height: 600px;
+    margin-bottom: 50px;
+  }
+    
+  .ContactUsForm{
+    width: 65vw;
+    height: 600px;
+  }
+}
+
+@media (max-width: 850px){
+
+  .ContactUsForm{
+    height: 560px;  
+  }
+  .Login{
+    width: 56vw;
+    height: 290px;
+  }
+
+  .Signup{
+    width: 56vw;
+    height: 545px;
+  }
+}
+
+@media (max-width: 800px){
+
+  .ContactUsForm{
+    height: 520px;  
+  }
+  .Login{
+    width: 57vw;
+    height: 280px;
+  }
+
+  .Signup{
+    width: 57vw;
+    height: 540px;
+  }
+}
+
+@media (max-width: 750px){
+
+  .ContactUsForm{
+    height: 480px;  
+  }
+  .Login{
+    width: 58vw;
+    height: 270px;
+  }
+
+  .Signup{
+    width: 58vw;
+    height: 535px;
+  }
+}
+
+@media (max-width: 700px){
+
+  .ContactUsForm{
+    height: 440px;  
+  }
+  .Login{
+    width: 59vw;
+    height: 260px;
+  }
+
+  .Signup{
+    width: 59vw;
+    height: 530px;
+  }
+}
+
+@media (max-width: 650px){
+
+  .ContactUsForm{
+    height: 400px;  
+  }
+  .Login{
+    width: 60vw;
+    height: 250px;
+  }
+
+  .Signup{
+    width: 59vw;
+    height: 520px;
+  }
+}
+
+@media (max-width: 600px){
+
+  .ContactUsForm{
+    height: 360px;  
+  }
+  .Signup{
+    width: 59vw;
+    height: 505px;
+  }
+
+  .Login{
+    width: 59vw;
+    height: 260px;
+  }
+}
+
+@media (max-width: 550px){
+
+  .ContactUsForm{
+    height: 320px;  
+  }
+  .Login{
+    width: 58vw;
+    height: 220px;
+  }
+
+  .Signup{
+    width: 59vw;
+    height: 490px;
+  }
+}
+
+@media (max-width: 500px){
+
+  .ContactUsForm{
+    height: 310px;  
+  }
+  .Login{
+    width: 57vw;
+    height: 200px;
+  }
+
+  .Signup{
+    width: 59vw;
+    height: 475px;
+  }
+}
+
+@media (max-width: 450px){
+
+  .ContactUsForm{
+    height: 300px;  
+  }
+  .Login{
+    width: 56vw;
+    height: 180px;
+  }
+
+  .Signup{
+    width: 59vw;
+    height: 450px;
+  }
 }
