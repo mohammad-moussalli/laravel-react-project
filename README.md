@@ -33,3 +33,5 @@
 ##### where he/she can update his details.
 
 ##### You can find demo pictures of the website below.
+
+![website](C:\Users\almou\OneDrive\Pictures\Screenshots\project1.png)
