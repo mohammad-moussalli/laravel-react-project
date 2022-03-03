@@ -13,8 +13,8 @@ const LoginSignup = () => {
     const [error, setError] = useState('');
     const history = useHistory();
 
-    const signinApi = "http://127.0.0.1:8000/api/auth/login";
-    const signupApi = "http://127.0.0.1:8000/api/auth/register";
+const signinApi = "http://127.0.0.1:8000/api/auth/login";
+const signupApi = "http://127.0.0.1:8000/api/auth/register";
 
     const signin = async (e) => {
         e.preventDefault();
@@ -32,27 +32,27 @@ const LoginSignup = () => {
         }).catch (err => {
             setError("Invalid Credentials")
         });
-    }
+  }
 
-    const signup = async (e) => {
-        e.preventDefault();
-        const user = {
-            email: email,
-            password: password,
-            password_confirmation: passwordConfirmation,
-            name: name
+  const signup = async (e) => {
+    e.preventDefault();
+    const user = {
+        email: email,
+        password: password,
+        password_confirmation: passwordConfirmation,
+        name: name
+    };
+    axios.post(signupApi, { ...user } )
+    .then(response => {
+        if(email === response.data.user.original.user.email){
+            localStorage.setItem("token", response.data.user.original.access_token)
+            history.push('/dashboard')
+            window.location.reload()
         };
-        axios.post(signupApi, { ...user } )
-        .then(response => {
-            if(email === response.data.user.original.user.email){
-                localStorage.setItem("token", response.data.user.original.access_token)
-                history.push('/dashboard')
-                window.location.reload()
-            };
-        }).catch(err => {
-            setError("Invalid Input")
-        });
-    }
+    }).catch(err => {
+        setError("Invalid Input")
+    });
+}
     const [showSignup, setShowSignup] = useState(true);
 
     return (
@@ -66,7 +66,6 @@ const LoginSignup = () => {
                 </form>
                 <p>{error}</p>  
             </Box>
-            
             :<Box className="Signup">
                 <form className='Register' onSubmit={signup} style={{display:'flex', flexDirection:'column'}}>
                     <TextField className='textfield' id="outlined-basic" label="Email" variant="outlined"  onChange={e => setEmail(e.target.value)}/>
@@ -81,4 +80,5 @@ const LoginSignup = () => {
         </div>
     );
 }
-export default LoginSignup;
+   
+  export default LoginSignup;
