@@ -56,6 +56,7 @@ useEffect(() => { getUser() }, []);
           
           :<Box className="UpdateData">
             <form className='UpdateUser' onSubmit={updateUser}>
+                <h1>Update User Data</h1>
                 <TextField className="textfield" value={email} id="outlined-basic"  variant="outlined" onChange={e => setEmail(e.target.value)}/>
                 <TextField className="textfield" value={name} id="outlined-basic"  variant="outlined" onChange={e => setName(e.target.value)}/>
                 <TextField className="textfield" value={password} id="outlined-basic" label="Password" variant="outlined" onChange={e => setPassword(e.target.value)}/>
