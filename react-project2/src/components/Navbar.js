@@ -37,6 +37,7 @@ const history = useHistory();
 function clearLocalStorage(){
     localStorage.clear();
     history.push('/login-signup');
+    window.location.reload();
 }
     const [anchorElNav, setAnchorElNav] = React.useState(null);
   
