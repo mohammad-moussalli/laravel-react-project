@@ -122,7 +122,7 @@ h6{
 .AboutUs{
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   margin: 50px auto;
@@ -205,6 +205,60 @@ h6{
   max-height: 600px;
 }
 
+h3{
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1450px){
+  .UserData{
+    width: 47vw; 
+  }
+
+  .UpdateUser{
+    width:47vw; 
+  }
+}
+
+@media (max-width: 1400px){
+  .UserData{
+    width: 49vw; 
+  }
+
+  .UpdateUser{
+    width:49vw; 
+  }
+}
+
+@media (max-width: 1350px){
+  .UserData{
+    width: 51vw; 
+  }
+
+  .UpdateUser{
+    width:51vw; 
+  }
+}
+
+@media (max-width: 1300px){
+  .UserData{
+    width: 53vw; 
+  }
+
+  .UpdateUser{
+    width:53vw; 
+  }
+}
+
+@media (max-width: 1250px){
+  .UserData{
+    width: 55vw; 
+  }
+
+  .UpdateUser{
+    width:55vw; 
+  }
+}
+
 @media (max-width: 1200px){
 
   .ContactUsForm{
@@ -223,6 +277,14 @@ h6{
   .Signup{
     width: 46vw;
   }
+
+  .UserData{
+    width: 56vw; 
+  }
+
+  .UpdateUser{
+    width:56vw; 
+  }
 }
 
 @media (max-width: 1175px){
@@ -238,6 +300,14 @@ h6{
   .Signup{
     width: 47vw;
   }
+  
+  .UserData{
+    width: 57vw; 
+  }
+
+  .UpdateUser{
+    width:57vw; 
+  }
 }
 
 @media (max-width: 1150px){
@@ -251,6 +321,14 @@ h6{
 
   .Signup{
     width: 48vw;
+  }
+  
+  .UserData{
+    width: 58vw; 
+  }
+  
+  .UpdateUser{
+    width:58vw; 
   }
 }
 
@@ -266,6 +344,14 @@ h6{
   .Signup{
     width: 49vw;
   }
+  
+  .UserData{
+    width: 59vw; 
+  }
+  
+  .UpdateUser{
+    width:59vw; 
+  }
 }
 
 @media (max-width: 1100px){
@@ -279,6 +365,14 @@ h6{
 
   .Signup{
     width: 50vw;
+  }
+  
+  .UserData{
+    width: 60vw; 
+  }
+  
+  .UpdateUser{
+    width:60vw; 
   }
 }
 
@@ -294,6 +388,14 @@ h6{
   .Signup{
     width: 51vw;
   }
+  
+  .UserData{
+    width: 61vw; 
+  }
+  
+  .UpdateUser{
+    width:61vw; 
+  }
 }
 
 @media (max-width: 1050px){
@@ -307,6 +409,14 @@ h6{
 
   .Login{
     width: 52vw;
+  }
+  
+  .UserData{
+    width: 62vw; 
+  }
+  
+  .UpdateUser{
+    width:62vw; 
   }
 }
 
@@ -322,6 +432,14 @@ h6{
   .Signup{
     width: 53vw;
   }
+  
+  .UserData{
+    width: 63vw; 
+  }
+  
+  .UpdateUser{
+    width:63vw; 
+  }
 }
 
 @media (max-width: 1000px){
@@ -335,6 +453,14 @@ h6{
 
   .Signup{
     width: 54vw;
+  }
+  
+  .UserData{
+    width: 64vw; 
+  }
+  
+  .UpdateUser{
+    width:64vw; 
   }
 }
 
@@ -361,6 +487,14 @@ h6{
     width: 65vw;
     height: 600px;
   }
+  
+  .UserData{
+    width: 65vw; 
+  }
+  
+  .UpdateUser{
+    width:65vw; 
+  }
 }
 
 @media (max-width: 850px){
@@ -376,6 +510,14 @@ h6{
   .Signup{
     width: 56vw;
     height: 545px;
+  }
+  
+  .UserData{
+    width: 67vw; 
+  }
+  
+  .UpdateUser{
+    width:67vw; 
   }
 }
 
@@ -393,6 +535,14 @@ h6{
     width: 57vw;
     height: 540px;
   }
+  
+  .UserData{
+    width: 69vw; 
+  }
+  
+  .UpdateUser{
+    width:69vw; 
+  }
 }
 
 @media (max-width: 750px){
@@ -408,6 +558,14 @@ h6{
   .Signup{
     width: 58vw;
     height: 535px;
+  }
+  
+  .UserData{
+    width: 71vw; 
+  }
+  
+  .UpdateUser{
+    width:71vw; 
   }
 }
 
@@ -425,6 +583,14 @@ h6{
     width: 59vw;
     height: 530px;
   }
+  
+  .UserData{
+    width: 73vw; 
+  }
+  
+  .UpdateUser{
+    width:73vw; 
+  }
 }
 
 @media (max-width: 650px){
@@ -440,6 +606,14 @@ h6{
   .Signup{
     width: 59vw;
     height: 520px;
+  }
+  
+  .UserData{
+    width: 75vw; 
+  }
+  
+  .UpdateUser{
+    width:75vw; 
   }
 }
 
@@ -457,6 +631,18 @@ h6{
     width: 59vw;
     height: 260px;
   }
+  
+  .UserData{
+    width: 77vw; 
+  }
+  
+  .UpdateUser{
+    width:77vw; 
+  }
+
+  h3{
+    font-size: medium;
+  }
 }
 
 @media (max-width: 550px){
@@ -472,6 +658,18 @@ h6{
   .Signup{
     width: 59vw;
     height: 490px;
+  }
+  
+  .UserData{
+    width: 79vw; 
+  }
+  
+  .UpdateUser{
+    width:79vw; 
+  }
+
+  h3{
+    font-size: medium;
   }
 }
 
@@ -489,6 +687,18 @@ h6{
     width: 59vw;
     height: 475px;
   }
+  
+  .UserData{
+    width: 80vw; 
+  }
+  
+  .UpdateUser{
+    width:80vw; 
+  }
+
+  h3{
+    font-size: medium;
+  }
 }
 
 @media (max-width: 450px){
@@ -504,5 +714,21 @@ h6{
   .Signup{
     width: 59vw;
     height: 450px;
+  }
+  
+  .UserData{
+    width: 81vw; 
+  }
+  
+  .UpdateUser{
+    width:81vw; 
+  }
+
+  h3{
+    font-size: medium;
+  }
+
+  h4{
+    font-size: small;
   }
 }
