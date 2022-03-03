@@ -27,7 +27,6 @@ const signupApi = "http://127.0.0.1:8000/api/auth/register";
             if(email === response.data.user.email){
                 localStorage.setItem("token", response.data.access_token)
                 history.push('/dashboard')
-                console.log(response.data)
             };
         }).catch (err => {
             setError("Invalid Credentials")
@@ -46,7 +45,6 @@ const signupApi = "http://127.0.0.1:8000/api/auth/register";
     .then(response => {
         if(email === response.data.user.original.user.email){
             localStorage.setItem("token", response.data.user.original.access_token)
-            console.log(response.data)
             history.push('/dashboard')
         };
     }).catch(err => {
