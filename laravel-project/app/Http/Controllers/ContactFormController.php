@@ -9,7 +9,7 @@ use App\Models\Contact;
 class ContactFormController extends Controller
 {
     // Store Contact Form data
-    public function contactForm(Request $request) {
+    public function ContactForm(Request $request) {
 
         // Form validation
             $validator = Validator::make($request->all(), [
