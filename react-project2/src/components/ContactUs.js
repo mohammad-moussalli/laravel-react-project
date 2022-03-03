@@ -27,6 +27,5 @@ const ContactUs = () => {
             </form>
         </Box>
     );
-  }
-   
-  export default ContactUs;
+}
+export default ContactUs;

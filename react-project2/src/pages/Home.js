@@ -2,7 +2,6 @@ import ImageCarousel from "../components/Carousel";
 import ContactUs from "../components/ContactUs";
 
 const Home = () => {
-
   return (
     <div className="ContactUs">
       <div className="contact">
@@ -14,5 +13,4 @@ const Home = () => {
     </div>
   );
 }
- 
 export default Home;
