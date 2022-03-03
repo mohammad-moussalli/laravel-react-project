@@ -34,4 +34,20 @@
 
 ##### You can find demo pictures of the website below.
 
+###### Landing Page
 ![project](assets/project1.png)
+
+###### About Us Page
+![project](assets/project2.png)
+
+###### Login Form
+![project](assets/project3.png)
+
+###### Signup Form
+![project](assets/project4.png)
+
+###### Dashboard Page
+![project](assets/project5.png)
+
+###### Update User Data Form
+![project](assets/project6.png)
